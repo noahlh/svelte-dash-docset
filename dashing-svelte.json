@@ -1,0 +1,75 @@
+{
+  "name": "Svelte",
+  "package": "svelte",
+  "index": "./svelte.dev/docs/index.html",
+  "selectors": {
+    "h2": [
+      {
+        "type": "Section",
+        "matchpath": "tutorial\\/.+\\/.+\\.html"
+      },
+      {
+        "type": "Section",
+        "matchpath": "docs\\/index.html+"
+      }
+    ],
+    "h3": [
+      {
+        "type": "Tag",
+        "requiretext": "^<.+>",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Tag",
+        "requiretext": "^{.+}",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Section",
+        "requiretext": "^[^svelte.\\W](\\w+\\s*)*",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Module",
+        "requiretext": "^svelte\\/*\\w*$",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Function",
+        "requiretext": "^svelte\\.+\\w*$",
+        "matchpath": "docs\\/index.html+"
+      }
+    ],
+    "h4": [
+      {
+        "type": "Directive",
+        "requiretext": "^\\w*\\s*:+.*$",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Tag",
+        "requiretext": "^<.+>",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Function",
+        "requiretext": "^[a-z$]\\w*$",
+        "matchpath": "docs\\/index.html+"
+      },
+      {
+        "type": "Section",
+        "requiretext": "^[A-Z](?:\\w*\\s*)*$",
+        "matchpath": "docs\\/index.html+"
+      }
+    ],
+    "meta[name='Description']": {
+      "type": "Guide",
+      "attr": "content",
+      "matchpath": "tutorial\\/.+\\/.+\\.html"
+    }
+  },
+  "ignore": ["ABOUT"],
+  "icon32x32": "./svelte.dev/favicon.png",
+  "allowJS": true,
+  "ExternalURL": "https://svelte.dev/docs/"
+}

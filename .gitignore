@@ -1,0 +1,7 @@
+data/
+node_modules/
+svelte.dev/
+svelte.docset
+yarn.lock
+yarn-error.log
+.DS_Store

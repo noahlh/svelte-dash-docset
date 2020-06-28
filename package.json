@@ -1,0 +1,16 @@
+{
+  "name": "svelte-dash-docset",
+  "version": "1.0.0",
+  "main": "getSvelte.js",
+  "scripts": {
+    "fetch": "node getSvelte.js",
+    "build": "dashing build --config dashing-svelte.json --source svelte.dev",
+    "generate": "npm run fetch && npm run build"
+  },
+  "author": "Noah Lehmann-Haupt <nlh@nlh.me>",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^9.0.1",
+    "puppeteer": "^4.0.0"
+  }
+}
