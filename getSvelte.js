@@ -20,7 +20,7 @@ async function fetchSvelte() {
 
   await page.goto("https://svelte.dev/favicon.png", { waitUntil: "networkidle0" });
 
-  // await crawl({ page, url: "tutorial/basics", pathModifier: "../../" });
+  await crawl({ page, url: "tutorial/basics", pathModifier: "../../" });
   await crawl({ page, url: "docs", pathModifier: "../" });
 
   console.log(`All done!  Closing browser`);
