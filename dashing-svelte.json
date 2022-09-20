@@ -6,66 +6,90 @@
     "h2": [
       {
         "type": "Section",
-        "matchpath": "tutorial\\/.+\\/.+\\.html"
+        "matchpath": "tutorial\\/.+\\/.+\\.html",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Section",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       }
     ],
     "h3": [
       {
         "type": "Tag",
         "requiretext": "^<.+>",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Tag",
         "requiretext": "^{.+}",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Section",
         "requiretext": "^[^svelte.\\W](\\w+\\s*)*",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Module",
         "requiretext": "^svelte\\/*\\w*$",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Function",
         "requiretext": "^svelte\\.+\\w*$",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       }
     ],
     "h4": [
       {
         "type": "Directive",
         "requiretext": "^\\w*\\s*:+.*$",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Tag",
         "requiretext": "^<.+>",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Function",
         "requiretext": "^[a-z$]\\w*$",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       },
       {
         "type": "Section",
         "requiretext": "^[A-Z](?:\\w*\\s*)*$",
-        "matchpath": "docs\\/index.html+"
+        "matchpath": "docs\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
       }
     ],
     "meta[name='Description']": {
       "type": "Guide",
       "attr": "content",
-      "matchpath": "tutorial\\/.+\\/.+\\.html"
+      "matchpath": "tutorial\\/.+\\/.+\\.html",
+      "regexp": "permalink",
+      "replacement": ""
     }
   },
   "ignore": ["ABOUT"],
