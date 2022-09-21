@@ -3,14 +3,14 @@ const { URL } = require("url");
 const fse = require("fs-extra");
 const path = require("path");
 const { time } = require("console");
-const fullBasePath = path.resolve("svelte.dev");
-const baseUrl = "https://svelte.dev/";
+const fullBasePath = path.resolve("kit.svelte.dev");
+const baseUrl = "https:/kit.svelte.dev/";
 
 fetchSvelte();
 
 async function fetchSvelte() {
   console.log("Loading headless browser");
-  let browser = await puppeteer.launch({ userDataDir: "./data" });
+  let browser = await puppeteer.launch({ userDataDir: "./dataKit" });
 
 
   /** @type {puppeteer.Page} */
@@ -18,10 +18,9 @@ async function fetchSvelte() {
   page.on("response", handleAssets);
   page.on("console", (msg) => console.log(msg.text()));
 
-  await page.goto("https://svelte.dev/favicon.png", { waitUntil: "networkidle0" });
+  await page.goto("https://kit.svelte.dev/favicon.png", { waitUntil: "networkidle0" });
 
-  await crawl({ page, url: "tutorial/basics", pathModifier: "../../" });
-  await crawl({ page, url: "docs", pathModifier: "../" });
+  await crawl({ page, url: "docs/introduction", pathModifier: "../../" });
 
   console.log(`All done!  Closing browser`);
   browser.close();
@@ -101,14 +100,22 @@ async function crawl({ page, url, pathModifier }) {
   let html = await page.content();
   await writeFileToDisk(path.join(fullBasePath, url, "index.html"), html);
 
+  console.log(`About to crawl ${nextUrl}`)
   if (nextUrl) await crawl({ page, url: nextUrl });
 }
 
+
 async function findNextPage() {
   // If next tutorial step AND not disabled
-  let nextPage = document.querySelector("a[aria-label='Next tutorial step']:not(.disabled)");
-  if (nextPage) {
-    return nextPage.getAttribute("href");
+  /** @type {HTMLDivElement[]} */
+  let pages = Array.from(document.querySelectorAll("div > span"));
+
+  let nextUrl = pages.filter((e) => e.textContent.includes("next"))[0].parentElement.querySelector("a")
+
+  console.log(`Next Page: ${nextUrl}`);
+  if (nextUrl) {
+      return nextUrl.getAttribute("href");
+    return;
   } else {
     return;
   }
@@ -133,7 +140,8 @@ async function updateHtml({ pathModifier }) {
   let headerTag = document.querySelector("nav");
   if (headerTag !== null) headerTag.parentNode.removeChild(headerTag);
 
-  let sideTag = document.querySelector("aside");
+  // Strip out the sidebar
+  let sideTag = document.querySelector("div.toc-container");
   if (sideTag !== null) sideTag.parentNode.removeChild(sideTag);
 
   console.log("Links")

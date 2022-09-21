@@ -5,3 +5,7 @@ svelte.docset
 yarn.lock
 yarn-error.log
 .DS_Store
+svelte.docset.zip
+dataKit
+kit.svelte.dev
+sveltekit.docset

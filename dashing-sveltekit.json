@@ -1,0 +1,172 @@
+{
+  "name": "Sveltekit",
+  "package": "sveltekit",
+  "index": "./kit.svelte.dev/docs/index.html",
+  "selectors": {
+    "h1": "Section",
+    "h3": [
+      {
+        "type": "Category",
+        "matchpath": "docs\\/web-standards\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "File",
+        "matchpath": "docs\\/routing\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/advanced-routing\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/load\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/form-actions\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/hooks\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/server-only-modules\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Module",
+        "matchpath": "docs\\/modules\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Attrbute",
+        "matchpath": "docs\\/link-options \\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/adapters\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Global",
+        "matchpath": "docs\\/page-options\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/packaging\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/cli\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Property",
+        "matchpath": "docs\\/configuration\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Module",
+        "matchpath": "docs\\/types\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/seo\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/assets\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/accessibility\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/appendix\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      }
+    ],
+    "h4": [
+      {
+        "type": "File",
+        "matchpath": "docs\\/routing\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Property",
+        "matchpath": "docs\\/load\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/form-actions\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Function",
+        "matchpath": "docs\\/hooks\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Function",
+        "matchpath": "docs\\/modules\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Type",
+        "matchpath": "docs\\/types\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      },
+      {
+        "type": "Category",
+        "matchpath": "docs\\/seo\\/index.html+",
+        "regexp": "permalink",
+        "replacement": ""
+      }
+    ]
+  },
+  "ignore": ["ABOUT"],
+  "icon32x32": "./svelte.dev/favicon.png",
+  "allowJS": true,
+  "ExternalURL": "https://svelte.dev/docs/"
+}
